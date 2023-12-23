@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function quadraticEquation(a, b, c) {
+  var discriminant = b * b - 4 * a * c;
+
+  if (discriminant > 0) {
+    var root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    var root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    alert('Квадратне рівняння має два корені: ' + root1 + ' та ' + root2);
+  } else if (discriminant === 0) {
+    var root = -b / (2 * a);
+    alert('Квадратне рівняння має один корінь: ' + root);
+  } else {
+    alert('Квадратне рівняння не має дійсних коренів');
+  }
+}
+
+
+var a = 1;
+var b = -3;
+var c = 2;
+
+quadraticEquation(a, b, c);
+    </script>
+</body>
+</html>

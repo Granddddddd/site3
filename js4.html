@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var secretNumber = Math.floor(Math.random() * 101); // Загадане число від 0 до 100
+var attempts = 0; // Лічильник спроб
+
+while (true) {
+  var userGuess = prompt("Вгадайте число від 0 до 100:");
+
+  // Перевірка, чи користувач відмінив введення або натиснув "Cancel" (ESC)
+  if (userGuess === null) {
+    alert("Гра відмінена. Загадане число було: " + secretNumber);
+    break;
+  }
+
+  var guess = parseInt(userGuess);
+
+  // Перевірка, чи введено коректне число
+  if (isNaN(guess) || guess < 0 || guess > 100) {
+    alert("Будь ласка, введіть коректне число від 0 до 100.");
+    continue;
+  }
+
+  attempts++;
+
+  if (guess === secretNumber) {
+    alert("Вітаємо! Ви вгадали число " + secretNumber + " за " + attempts + " спроб!");
+    break;
+  } else if (guess < secretNumber) {
+    alert("Спробуйте більше.");
+  } else {
+    alert("Спробуйте менше.");
+  }
+}
+    </script>
+</body>
+</html>

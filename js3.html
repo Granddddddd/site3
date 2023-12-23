@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkAgeWithAlert(age) {
+  if (age >= 18) {
+    alert("Вам дозволено отримати доступ до сайту.");
+  } else {
+    alert("Вам не дозволено отримати доступ до сайту. Ваш вік менше 18 років.");
+  }
+}
+
+
+var userAge = prompt("Будь ласка, введіть свій вік у роках:");
+
+
+checkAgeWithAlert(parseInt(userAge));
+    </script>
+</body>
+</html>

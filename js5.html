@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function checkForSpam(str) {
+  var lowerStr = str.toLowerCase();
+
+  if (lowerStr.includes("безкоштовно") && lowerStr.includes("гарантія")) {
+    alert("Цей текст містить слова 'безкоштовно' і 'гарантія'.");
+    return true;
+  } else {
+    alert("Цей текст не містить обидва ключових слова.");
+    return false;
+  }
+}
+
+
+var userText = prompt("Введіть текст:");
+
+if (userText !== null) {
+  checkForSpam(userText);
+} else {
+  alert("Введення скасовано.");
+} 
+    </script>
+</body>
+</html>
